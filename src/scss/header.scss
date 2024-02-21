@@ -1,0 +1,23 @@
+.header{
+    background-color:#bdffca;
+    &_container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:30rem;
+        justify-content: space-around;
+    }
+    &_image {
+        max-height: 100px;
+    }
+    &_menu{
+        display: flex;
+        flex-direction: row;
+        gap: 0.8rem;
+        align-items: center;
+        justify-content:space-around ;
+        text-align: center;
+        font-family: League gothic;
+    }
+};
+

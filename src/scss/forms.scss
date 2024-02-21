@@ -1,0 +1,21 @@
+.title{
+    margin: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #cfffd9;
+    &_container{
+        padding: 1px;
+        margin: 1rem;
+        text-align: center;
+        background-color: black;
+        
+    }
+    
+}
+.form_container{
+    margin: 0 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background-color:#cfffd9
+}
