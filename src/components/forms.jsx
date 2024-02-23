@@ -43,12 +43,13 @@ return (
           <Question text='¿Te gusta cocinar?'/> 
           <Question text='¿Eres una persona resiliente?'/> 
           <Question text='¿Te gustaría ampliar tu círculo de amistades?'/> 
-          <fieldset>
+          <fieldset className="btn">
           <GetAvatar
             updateAvatar={updateAvatarAuthor}
             text="Sube una foto tuya"
           />
           </fieldset>
+          <button className="btn"> Generar perfil</button>
         </div>
           
       </form>
