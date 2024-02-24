@@ -9,7 +9,7 @@ function ProfilePage () {
                 <Link className="btn" to="/forms">
                     Editar mi perfil {""}
                 </Link>
-                <Link className="btn" to="/LandingPage">
+                <Link className="btn" to="/">
                     Volver al inicio {""}
                 </Link>
         </section>

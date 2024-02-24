@@ -19,7 +19,7 @@ return (
           <Question text='¿Es imprescindible que compartaís la misma salud financiera?'/> 
           <Question text='¿Te importaría que tu compañero tuviese mascota?'/> 
           <Question text='¿Es importante para ti la semejanza de edad entre tu compañero y tú?'/> 
-          <label>¿Qué tipo de vivienda prefieres?</label>
+          {/*<label>¿Qué tipo de vivienda prefieres?</label>
           <select name="hogar" id="hogar_id">
             <option value="piso">Piso</option>
             <option value="casa">Casa</option>
@@ -36,13 +36,15 @@ return (
           <select name="actividades" id="actividades_id">
             <option value="nunca">Nunca</option>
             <option value="mensualmente">Mensualmente</option>
-            <option value="semanalmente">Seanalmente</option>
+            <option value="semanalmente">Semanalmente</option>
             <option value="varias veces a la semana">Varias veces a la semana</option>
             <option value="diariamente">Diariamente</option>
-          </select>
+          </select>*/} 
           <Question text='¿Te gusta cocinar?'/> 
           <Question text='¿Eres una persona resiliente?'/> 
           <Question text='¿Te gustaría ampliar tu círculo de amistades?'/> 
+          <Question text='¿Es importante para ti el orden y la limpieza?'/>
+          <Question text='¿Eres una persona nocturna?'/>
           <fieldset className="btn">
           <GetAvatar
             updateAvatar={updateAvatarAuthor}

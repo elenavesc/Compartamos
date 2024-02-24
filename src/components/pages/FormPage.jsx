@@ -8,7 +8,7 @@ return (
     <section>
       
       <Forms updateAvatarAuthor={updateAvatarAuthor}/>
-      <Link className="btn" to="/LandingPage">Volver al inicio{""} </Link>
+      <Link className="btn" to="/">Volver al inicio{""} </Link>
       </section>
 )};
 export default FormPage;

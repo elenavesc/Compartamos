@@ -1,0 +1,37 @@
+.landing{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    &__title{
+        justify-content: center;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:300%;
+        background-color:#cfffd9;
+        color: #434b45;
+    }
+    &__text{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        flex-direction: row;
+
+    }
+    &__subtitle{
+        justify-content: center;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-bottom: 20px;
+        align-items: center;
+
+    }
+    &_image{
+        padding-top: 10px;
+        padding-left: 10px;
+        max-width: 150px;
+       
+    }
+}
+.btn{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}

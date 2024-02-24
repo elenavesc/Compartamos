@@ -9,7 +9,7 @@ function AboutUs () {
                 <Link className="btn" to="/card">
                     Mi perfil {""}
                 </Link>
-                <Link className="btn" to="/LandingPage">
+                <Link className="btn" to="/">
                     Volver al inicio {""}
                 </Link>
         </section>
