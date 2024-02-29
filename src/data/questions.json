@@ -1,0 +1,74 @@
+[
+  {
+    "id": "cambio_ciudad",
+    "text": "¿Te importaría cambiar de ciudad para convivir?",
+    "answers": [0, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": "mismo_sexo",
+    "text": "¿Es importante que tu compañero sea del mismo sexo que tú?",
+    "answers": [0, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": "compartir_aficiones",
+    "text": "¿Te gustaría compartir aficiones y tu tiempo libre con tu compañero?",
+    "answers": [0, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": "finanzas",
+    "text": "¿Es imprescindible que compartaís la misma salud financiera?",
+    "answers": [0, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": "mascota",
+    "text": "¿Te importaría que tu compañero tuviese mascota?",
+    "answers": [0, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": "edad",
+    "text": "¿Es importante para ti la semejanza de edad entre tu compañero y tú?",
+    "answers": [0, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": "hogar",
+    "text": "¿Qué tipo de vivienda prefieres?",
+    "answers": ["Piso", "Casa", "Chalet"]
+  },
+  {
+    "id": "lugar",
+    "text": "¿Dónde preferírias vivir?",
+    "answers": ["Costa", "Campo", "Ciudad", "Pueblo"]
+  },
+  {
+    "id": "actividades",
+    "text": "¿Cada cúanto te gustaría realizar actividades junto a tu compañero?",
+    "answers": [
+      "Nunca",
+      "Mensualmente",
+      "Semanalmente",
+      "Varias veces a la semana",
+      "Diariamente"
+    ]
+  },
+  { "id": "cocinar", "text": "¿Te gusta cocinar?", "answers": [0, 1, 2, 3, 4, 5] },
+  {
+    "id": "resiliente",
+    "text": "¿Eres una persona resiliente?",
+    "answers": [0, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": "ampliar_amistades",
+    "text": "¿Te gustaría ampliar tu círculo de amistades?",
+    "answers": [0, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": "orden",
+    "text": "¿Es importante para ti el orden y la limpieza?",
+    "answers": [0, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": "nocturna",
+    "text": "¿Eres una persona nocturna?",
+    "answers": [0, 1, 2, 3, 4, 5]
+  }
+]
