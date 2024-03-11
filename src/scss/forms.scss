@@ -11,6 +11,20 @@
     }
     
 }
+.username{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between ;
+        font-family: Roboto;
+        font-weight: 500;
+}
+.city{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Roboto;
+    font-weight: 500;
+}
 .form_container{
     margin: 0 2rem 2rem 2rem;
     display: flex;

@@ -2,6 +2,7 @@
 import "../scss/forms.scss";
 import Question from './question';
 import GetAvatar from "./getAvatar";
+import { Link } from "react-router-dom";
 
 function form ( {
   updateAvatarAuthor,
@@ -15,12 +16,23 @@ function form ( {
 
     alert(`Datos a enviar:\n${JSON.stringify(data, null, ' ')}`)
   }
+  const handleInput = (ev) => {
+    updateAnswer(ev.currentTarget.id, ev.currentTarget.value);
+}
 return (
       <form className="addForm">
         <div className="title_container">
         <h2 className="title">Cuéntale sobre ti:</h2>
         </div>
         <div className="form_container">
+
+          <label className="username">Tu nombre:
+          <input type="text" value={data.name} onInput={handleInput} id="name" />
+          </label>
+
+          <label className="city">Tu ciudad:
+          <input type="text" value={data.city} onInput={handleInput} id="city" />
+          </label>
 
           {
             questions.map( oneQuestion => 
@@ -34,7 +46,8 @@ return (
             text="Sube una foto tuya"
           />
           </fieldset>
-          <button className="btn" onClick={handleClickBtnGenerar}> Generar perfil</button>
+          <Link className="btn" to="/card">Generar perfil</Link>
+         {/*<button className="btn" onClick={handleClickBtnGenerar}> Generar perfil</button>*/}
         </div>
           
       </form>

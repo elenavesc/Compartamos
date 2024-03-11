@@ -42,7 +42,7 @@ function App() {
                 <Routes>
                   <Route path="/" element={<LandingPage/>}/>
                   <Route path="/forms"element={<FormPage questions={QUESTIONS} updateAnswer={updateAnswer} data={data} updateAvatarAuthor={updateAvatarAuthor}/>}/>
-                  <Route path="/card" element={<ProfilePage/>}/>
+                  <Route path="/card" element={<ProfilePage data={data} />}/>
                   <Route path="/aboutUs" element={<AboutUs/>}/>
                   <Route path="/similar" element={<SimilarProfile/>}/>
                 </Routes>
