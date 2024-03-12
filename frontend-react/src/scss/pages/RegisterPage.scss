@@ -1,0 +1,26 @@
+.fields {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    width: 40%;
+    margin: 2em 1em;
+    gap: .5em;
+  
+    .text--error {
+      grid-column: span 2;
+    }
+  }
+  
+  .loginForm {
+    width: 40%;
+    min-width: 400px;
+    margin-inline: auto;
+    margin-top: 2.5rem;
+    border: solid 3px #555;
+    padding: 2em;
+    text-align: center;
+  
+    .fields {
+      margin-inline: auto;
+      justify-content: center;
+    }
+  }

@@ -7,11 +7,14 @@ import ProfilePage from "./pages/ProfilePage"
 import AboutUs from "./pages/AboutUs";
 import FormPage from "./pages/FormPage";
 import SimilarProfile from "./pages/SimilarProfiles";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LogingPage";
 
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
 import QUESTIONS from "../data/questions.json";
+
 
 const QUESTION_IDS = QUESTIONS.map( oneQuestion => [oneQuestion.id,""] );
 const EMPTY_DATA = { image: "", ...Object.fromEntries(QUESTION_IDS) };
@@ -45,6 +48,8 @@ function App() {
                   <Route path="/card" element={<ProfilePage data={data} />}/>
                   <Route path="/aboutUs" element={<AboutUs/>}/>
                   <Route path="/similar" element={<SimilarProfile/>}/>
+                  <Route path="/register" element={<RegisterPage/>}/>
+                  <Route path="/login" element={<LoginPage/>}/>
                 </Routes>
             
             </main>

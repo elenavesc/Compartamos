@@ -11,11 +11,11 @@ function Header () {
                 <Link className="header_menu" to="/">
                     Inicio{" "}
                 </Link>
-                <Link className="header_menu" to="/forms">
-                    Regístrate{" "}
-                </Link>
                 <Link className="header_menu" to="/card">
                     Mi perfil {" "}
+                </Link>
+                <Link className="header_menu" to="/login">
+                    Accede {" "}
                 </Link>
                 <Link className="header_menu" to="/AboutUs">
                     Contáctanos {" "}
