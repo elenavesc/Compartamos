@@ -8,6 +8,9 @@ function Header () {
             <div className='header_container'>
                 <img className="header_image" src={Image} alt="logo compartamos" />
                 <section className='header_menu'>
+                <Link className="header_menu" to="/">
+                    Inicio{" "}
+                </Link>
                 <Link className="header_menu" to="/forms">
                     Regístrate{" "}
                 </Link>

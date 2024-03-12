@@ -30,8 +30,12 @@ return (
           <input type="text" value={data.name} onInput={handleInput} id="name" />
           </label>
 
-          <label className="city">Tu ciudad:
+          <label className="adress">Tu ciudad:
           <input type="text" value={data.city} onInput={handleInput} id="city" />
+          </label>
+
+          <label className="age">Tu edad:
+          <input type="text" value={data.age} onInput={handleInput} id="age" />
           </label>
 
           {
