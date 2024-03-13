@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import image from "../../images/3.png";
 import "../../scss/pages/LandingPage.scss";
-import imageFam from "../../images/abuelos.png";
-import imageSpain from "../../images/abuelos2.jpg";
+import imageFam from "../../images/IMG-20240302-WA0033.jpg";
+import imageSpain from "../../images/IMG-20231201-WA0071.jpg";
 import imageTwo from "../../images/Screenshot_20240308_151837_Gallery.jpg";
 
 
