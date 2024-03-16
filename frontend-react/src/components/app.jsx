@@ -9,6 +9,7 @@ import FormPage from "./pages/FormPage";
 import SimilarProfile from "./pages/SimilarProfiles";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LogingPage";
+import "../scss/app.scss"
 
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
@@ -38,7 +39,7 @@ function App() {
     }
      
     return (
-        <div>
+        <div className="main">
             <Header />
             <main>
             

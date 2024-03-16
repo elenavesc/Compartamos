@@ -83,8 +83,8 @@ function RegisterPage() {
         <p>Te has registrado correctamente. Puedes acceder desde la <Link to="/login">página del login</Link></p>
       }
 
-      <button className="form__btn" type="submit">Enviar</button>
-      <Link className="form__btn" to="/">Volver</Link>
+      <button className="btn" type="submit">Enviar</button>
+      <Link className="btn" to="/">Volver</Link>
     </form>
     );
   }

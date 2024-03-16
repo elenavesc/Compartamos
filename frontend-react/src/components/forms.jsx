@@ -24,8 +24,8 @@ return (
         <div className="title_container">
         <h2 className="title">Cuéntale sobre ti:</h2>
         </div>
-        <div className="form_container">
-
+        <section className="section">
+          <div className="nice-form-group">
           <label className="username">Tu nombre:
           <input type="text" value={data.name} onInput={handleInput} id="name" />
           </label>
@@ -52,7 +52,8 @@ return (
           </fieldset>
           <Link className="btn" to="/card">Generar perfil</Link>
          {/*<button className="btn" onClick={handleClickBtnGenerar}> Generar perfil</button>*/}
-        </div>
+         </div>
+        </section>
           
       </form>
 )};
