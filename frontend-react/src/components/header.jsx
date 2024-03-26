@@ -11,7 +11,7 @@ function Header () {
                 <Link className="header_menu" to="/">
                     Inicio{" "}
                 </Link>
-                <Link className="header_menu" to="/card">
+                <Link className="header_menu" to="/profile">
                     Mi perfil {" "}
                 </Link>
                 <Link className="header_menu" to="/login">
