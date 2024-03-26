@@ -1,6 +1,11 @@
+
 .aboutUs{
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(0deg, #cfffd9, white);
     display: flex;
     flex-direction: column;
+    padding-bottom: 4rem;
 }
 h2{
     text-align: center;

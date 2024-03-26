@@ -30,9 +30,6 @@ function LandingPage(){
               <p className="landing_frase">"Mi soledad no tiene nada que ver con la presencia o ausencia de personas. Detesto quien me roba la soledad sin a cambio ofrecer verdadera compañía"</p>
               <p className="landing_author">-Friedrich Nietzsche-</p>
             </div>
-          <Link className="btn" to="/forms">
-            Encuentralo {" "}
-          </Link>
         </div>
       </div>  
     )

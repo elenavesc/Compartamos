@@ -36,6 +36,10 @@ function ProfilePage() {
         <img className="image_img" src={profileData?.image} alt="mi imagen" />
       </div>
 
+      <Link className="btn" to="/forms">
+        Modificar mi perfil {""}
+      </Link>
+
       <Link className="btn" to="/">
         Volver al inicio {""}
       </Link>
