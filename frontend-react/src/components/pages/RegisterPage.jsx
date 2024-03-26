@@ -1,18 +1,20 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import "../../scss/pages/RegisterPage.scss"
 
 function RegisterPage() {
 
   const [ errors, setErrors ] = useState( {} );
 
+  const [errorResponse, setErrorResponse] = useState(undefined)
+
   const [data, setData] = useState({
     name: '',
-    user: '', 
-    pass: '',
+    email: '', 
+    password: '',
   });
 
-  const [ serverResopnse, setServerResopnse ] = useState(  );
+  const navigate = useNavigate();
 
   const handleInput = (ev) => {
     setData({
@@ -26,11 +28,8 @@ function RegisterPage() {
 
     const error = {};
 
-    if( data.name === '' ) {
-      error.name = 'El nombre es obligatorio';
-    }
-    if( data.pass === '' ) {
-      error.pass = 'La contraseña es obligatoria';
+    if( data.password === '' ) {
+      error.password = 'La contraseña es obligatoria';
     }
 
     if( Object.keys(errors).length > 0 ) {
@@ -38,20 +37,22 @@ function RegisterPage() {
     }
     else {
       // Fetch
-
       const fetchCreateUser = async () => {
-        const response = await fetch('http://localhost:3000/api/users', {
+        fetch('http://localhost:8080/register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json'},
           body: JSON.stringify(data)
-        });
+        }).then(async (response) =>
+          {
+            const reponseData = await response.json()
+            localStorage.setItem('token', reponseData.token)
+            setErrorResponse(undefined)
 
-        const dataResponse = await response.json();
-
-        console.log(dataResponse);
-
-        setServerResopnse(dataResponse);
-
+            navigate("/forms")
+          }
+        ).catch((error) => {
+          setErrorResponse(error.message)
+        })
       }
 
       fetchCreateUser();
@@ -62,27 +63,18 @@ function RegisterPage() {
     <form onSubmit={handleSubmit}>
       <h2>Regístrate</h2>
       <div className="fields">
-        <label htmlFor="name">Nombre: </label>
-        <input type="text" name="name" id="name" onInput={handleInput} value={data.name} />
-        <span className="text--error">{errors.name}</span>
-        <label htmlFor="user">Usuaria: </label>
-        <input type="text" name="user" id="user" onInput={handleInput} value={data.user} />
-        <span className="text--error">{errors.user}</span>
+        <label htmlFor="user">Usuario: </label>
+        <input type="text" name="email" id="email" onInput={handleInput} value={data.email} />
+        <span className="text--error">{errors.email}</span>
         <label htmlFor="pass">Contraseña: </label>
-        <input type="password" name="pass" id="pass" onInput={handleInput} value={data.pass} />
-        <span className="text--error">{errors.pass}</span>
+        <input type="password" name="password" id="password" onInput={handleInput} value={data.password} />
+        <span className="text--error">{errors.password}</span>
       </div>
 
       {
-        serverResopnse && serverResopnse.success === false &&
-        <p className="text--error">{serverResopnse.error}</p>
+        errorResponse &&
+        <p className="text--error">{errorResponse}</p>
       }
-
-      {
-        serverResopnse && serverResopnse.success === true &&
-        <p>Te has registrado correctamente. Puedes acceder desde la <Link to="/login">página del login</Link></p>
-      }
-
       <button className="btn" type="submit">Enviar</button>
       <Link className="btn" to="/">Volver</Link>
     </form>
