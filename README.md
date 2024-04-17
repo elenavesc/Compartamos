@@ -1,71 +1,89 @@
 # Compartamos
 
-¡Bienvenido a Compartamos! 
-Esta plataforma fue diseñada pensando en brindar a las personas mayores la oportunidad de encontrar un compañero de piso con intereses similares y garantizar un entorno de convivencia cómodo y seguro.
+Welcome to Compartamos!
+This platform was designed with the aim of providing older adults the opportunity to find a roommate with similar interests and ensuring a comfortable and safe living environment.
 
-## Características Principales
+### Landing Page
+![portada](https://github.com/elenavesc/Compartamos/assets/147326237/91c91f45-88d1-492b-a736-6c19c36a9922)
 
-- **Perfil Personalizado:** Cada usuario puede crear un perfil detallado con información relevante sobre sus preferencias, estilo de vida y preferencias de convivencia.
+### Login Page
+![registro](https://github.com/elenavesc/Compartamos/assets/147326237/46db58f7-2360-4d79-9653-3066808ebf2f)
 
-- **Búsqueda Inteligente:** La aplicación utiliza un algoritmo avanzado para sugerir posibles compañeros de piso basados en la compatibilidad de perfiles.
+After access your profile will appear.
 
-- **Seguridad y Privacidad:** Priorizamos la seguridad y privacidad de nuestros usuarios. La información personal está encriptada y solo se comparte con el consentimiento de los usuarios.
+### Profile Page
 
-- **Diseño Responsive:** La aplicación es totalmente responsive, adaptándose a dispositivos móviles para facilitar el acceso y uso desde cualquier lugar y en cualquier momento.
+![perfil_page-0001](https://github.com/elenavesc/Compartamos/assets/147326237/b7e4652e-e2ca-42be-8d42-ac3b6350c94d)
 
-## Tecnologías Utilizadas
+If you are not registered, the form page will appear where you will fill out your information and generate your profile. You can also access it from the profile page if you want to make any changes.
 
-- **HTML:** Utilizamos HTML para la estructura básica de la aplicación, garantizando un marcado semántico.
+### Form Page
 
-- **SCSS:** La hoja de estilo está escrita en SCSS para un código más limpio y mantenible, mejorando la apariencia y la experiencia del usuario.
+![formulario_page-0001](https://github.com/elenavesc/Compartamos/assets/147326237/0c27c0b5-008d-4b66-88ee-44399b0c0a95)
 
-- **React:** La interfaz de usuario dinámica y reactiva está construida con React, facilitando la creación de componentes reutilizables y el manejo eficiente del estado de la aplicación.
+On the contact page you will find more information about the app.
 
-- **Express:** Para la creación del servidor y el manejo de las rutas, utilizamos Express, un framework de Node.js que simplifica el desarrollo del lado del servidor.
+### Contact Page
 
-- **MySQL:** La base de datos relacional MySQL almacena de forma segura la información de los usuarios y facilita consultas eficientes para la búsqueda de compañeros de piso.
+![aboutus](https://github.com/elenavesc/Compartamos/assets/147326237/32604284-5736-46a9-9e30-4c4d04144ce6)
 
-## Instalación y Ejecución
+## Key Features
 
-1. Clona el repositorio:
+- **Personalized Profile:** Each user can create a detailed profile with relevant information about their preferences, lifestyle, and living preferences.
+
+- **Smart Search:** The application uses an advanced algorithm to suggest potential roommates based on profile compatibility.
+
+- **Security and Privacy:** We prioritize the security and privacy of our users. Personal information is encrypted and only shared with the consent of the users.
+
+- **Responsive Design:** The application is fully responsive, adapting to mobile devices for easy access and use from anywhere and at any time.
+
+## Technologies Used
+
+- **HTML:** We use HTML for the basic structure of the application, ensuring semantic markup.
+
+- **SCSS:** The stylesheet is written in SCSS for cleaner and more maintainable code, enhancing the appearance and user experience.
+
+- **React:** The dynamic and reactive user interface is built with React, making it easy to create reusable components and efficiently manage the application state.
+
+- **Express:** For server creation and route handling, we use Express, a Node.js framework that simplifies server-side development.
+
+- **MySQL:** The MySQL relational database securely stores user information and facilitates efficient queries for roommate search.
+
+## Installation and Execution
+
+1. Clone the repository:
 
 ```bash
-git clone https://github.com/tuusuario/compis-app.git
-cd compis-app
+git clone https://github.com/yourusername/sharemates-app.git
+cd sharemates-app
 ```
 
-2. Instala las dependencias:
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-3. Configura la base de datos MySQL con el script proporcionado en `database.sql`.
+3. Configure the MySQL database with the provided script in `database.sql`.
 
-4. Configura las variables de entorno en un archivo `.env`:
+4. Set up environment variables in a `.env` file:
 
-```env
-PORT=3000
-DB_HOST=localhost
-DB_USER=tuusuario
-DB_PASSWORD=tucontraseña
-DB_NAME=compis_db
-```
+contact with us: contact@compartamos.com
 
-5. Inicia la aplicación:
+5. Start the application:
 
 ```bash
 npm start
 ```
 
-Visita `http://localhost:3000` en tu navegador para comenzar a utilizar la aplicación.
+Visit `http://localhost:3000` in your browser to start using the application.
 
-## Contribuciones
+## Contributions
 
-¡Agradecemos cualquier contribución para mejorar esta aplicación! Si encuentras errores, tienes ideas para nuevas características o mejoras, no dudes en crear un pull request.
+We appreciate any contributions to improve this application! If you find bugs, have ideas for new features or improvements, feel free to create a pull request.
 
-## Contacto
+## Contact
 
-Para cualquier pregunta o problema, no dudes en ponerte en contacto en [contacto@compartamos.com](mailto:contacto@compartamos.com).
+For any questions or issues, feel free to contact us at [contact@compartamos.com](mailto:contact@compartamos.com).
 
-¡Esperamos que disfrutes usando Compañeros de Vivienda para Personas Mayores!
+We hope you enjoy using Compartamos for Older Adults Living!
