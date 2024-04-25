@@ -45,7 +45,6 @@ function form({ updateAvatarAuthor, updateAnswer, questions }) {
     });
   };
 
-  // TODO AÑADIR ERROR EN ROJO SI SE PRODUCE
   return (
     <form className="addForm">
       <div className="title_container">
@@ -83,13 +82,11 @@ function form({ updateAvatarAuthor, updateAnswer, questions }) {
               id="birthdate"
             />
           </label>
-          </div>
-          </section>
-          <h3 className="h31">¿Qué prefieres?</h3>
-          <section className="section">
-          <div className="nice-form-group">
-            
-
+        </div>
+      </section>
+      <h3 className="h31">¿Qué prefieres?</h3>
+      <section className="section">
+        <div className="nice-form-group">
           {questions.map((oneQuestion) => (
             <Question
               key={oneQuestion.id}
@@ -102,24 +99,24 @@ function form({ updateAvatarAuthor, updateAnswer, questions }) {
           ))}
 
           {error && <p>{error}</p>}
-          </div>
+        </div>
       </section>
       <h3 className="h31">¡Sonríe para la foto!</h3>
-            <section className="section">
-          <fieldset className="btn">
-            <GetAvatar
-              updateAvatar={updateAvatarAuthor}
-              text="Sube una foto tuya"
-            />
-          </fieldset>
-          </section>
+      <section className="section">
+        <fieldset className="btn">
+          <GetAvatar
+            updateAvatar={updateAvatarAuthor}
+            text="Sube una foto tuya"
+          />
+        </fieldset>
+      </section>
 
-          <section>
-            <button className="btn" onClick={handleOnClick}>
-            {" "}
-            Generar perfil
-          </button>
-          </section>
+      <section>
+        <button className="btn" onClick={handleOnClick}>
+          {" "}
+          Generar perfil
+        </button>
+      </section>
     </form>
   );
 }

@@ -42,18 +42,20 @@
   &_p {
     margin: 2rem;
   }
+
   &_ph {
     text-align: center;
-    margin:0 auto;
+    margin: 0 auto;
     width: 80%;
     display: flex;
     padding: 2rem;
-    background-color:white ;
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
     border-radius: 0.75rem;
+
     @media (max-width:767px) {
       flex-direction: column;
-      
+
     }
   }
 
@@ -82,6 +84,7 @@
       height: 20rem;
       opacity: 1;
       filter: contrast(120%);
+
       @media (max-width: 768px) {
         width: 10rem;
         height: 10rem;
@@ -102,6 +105,7 @@
       max-width: 80%;
     }
   }
+
   &_author {
     justify-content: center;
     text-align: center;
@@ -112,5 +116,3 @@
     }
   }
 }
-
-

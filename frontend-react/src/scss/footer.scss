@@ -1,38 +1,46 @@
-.footer{
+.footer {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     margin-top: auto;
-    background-color:black;
+    background-color: black;
     width: 100%;
-    &_text{
+
+    &_text {
         color: rgb(158, 158, 158);
         padding-top: 30px;
         padding-left: 50px;
         padding-right: 250px;
         font-family: "Space Grotesk";
         font-size: small;
-        @media (max-width: 768px){
+
+        @media (max-width: 768px) {
             padding-right: 10px;
             font-size: 10px;
         }
-      
+
     }
-    &_container{
+
+    &_container {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap:30rem;
+        gap: 30rem;
+
         @media(max-width:768px) {
             gap: 5rem;
         }
     }
+
     &_image {
         max-height: 100px;
-        margin-right:4rem; 
+        margin-right: 4rem;
+
         @media(max-width:768px) {
             margin-right: 1rem;
         }
     }
-    
-};
+
+}
+
+;
