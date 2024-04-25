@@ -6,7 +6,9 @@ function AboutUs() {
   return (
     <section className="aboutUs">
       <h2>Sobre nosotros</h2>
-      <h3 className="h32">Contra la Sombra de la Soledad: Un Homenaje a Nuestros Mayores</h3>
+      <h3 className="h32">
+        Contra la Sombra de la Soledad: Un Homenaje a Nuestros Mayores
+      </h3>
 
       <section className="text">
         <div className="div">
@@ -50,6 +52,81 @@ function AboutUs() {
           </p>
         </div>
         <img src={imageFam} className="image" alt="" />
+      </section>
+      <section className="section2">
+        <div className="form__contact" id="#_contacto">
+          <h3 className="h32">CONTACTO</h3>
+
+          <p className="phrase2">
+            Si deseas ponerte en contacto con nosotros te lo ponemos fácil.
+          </p>
+
+          <p className="phrase">
+            Todos los campos marcados con{" "}
+            <strong className="form__contact__info__asterisco">*</strong> son
+            obligatorios
+          </p>
+        </div>
+
+        <form
+          className="form__application"
+          action="https://formspree.io/f/mbjvegey"
+          method="post"
+        >
+          <label className="label-form" for="name">
+            <span className="phrase3">
+              Nombre Completo<span class="text-style-1">*</span>
+            </span>
+            <input
+              className="phrase3"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Tu nombre"
+              autocomplete="name"
+              required
+            />
+          </label>
+          <label className="label-form" for="email">
+            <span className="phrase3">
+              Email<span class="text-style-1">*</span>
+            </span>
+            <input
+              className="phrase3"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Tu mejor email"
+              autocomplete="email"
+              required
+            />
+          </label>
+          <label className="label-form" for="tel">
+            <span className="phrase3">Teléfono</span>
+            <input
+              className="phrase3"
+              type="text"
+              name="tel"
+              id="tel"
+              placeholder="Ej:123456789"
+              autocomplete="tel"
+            />
+          </label>
+          <label className="label-form" for="message">
+            <span className="phrase3">
+              Mensaje<span class="text-style-1">*</span>
+            </span>
+            <textarea
+              className="phrase3"
+              id="message"
+              placeholder="¡Cuéntanos!"
+              required
+            ></textarea>
+          </label>
+          <div className="button-container">
+            <input className="btn" type="submit" value="ENVIAR" />
+          </div>
+        </form>
       </section>
       <section>
         <Link className="btn" to="/profile">
