@@ -4,6 +4,11 @@
     width: 40%;
     margin: 2em 1em;
     gap: .5em;
+    background-color: #d3ffdc;
+    
+    @media (max-width: 768px){
+      width: 70%;
+    }
   
     .text--error {
       grid-column: span 2;
@@ -11,11 +16,7 @@
   }
   
   .loginForm {
-    width: 40%;
-    min-width: 400px;
     margin-inline: auto;
-    margin-top: 2.5rem;
-    border: solid 3px #555;
     padding: 2em;
     text-align: center;
   
@@ -23,4 +24,7 @@
       margin-inline: auto;
       justify-content: center;
     }
+  }
+  h3 {
+      font-family: "Space Grotesk";
   }

@@ -50,14 +50,14 @@
         display: block;
         color: var(--nf-label-color);
         font-size: var(--nf-label-font-size);
-        font-family: var(--nf-label-font-family);
+        font-family: "Space Grotesk";
         margin-bottom: calc(var(--nf-input-size) / 2);
         white-space: initial;
  }    
 
     select {
         background: var(--nf-input-background-color);
-        font-family: inherit;
+        
         font-size: var(--nf-input-font-size);
         border-color: var(--nf-input-border-color);
         border-width: var(--nf-input-border-width);
@@ -67,9 +67,9 @@
         border-radius: var(--nf-input-border-radius);
         border-bottom-width: var(--nf-input-border-bottom-width);
         color: var(--nf-input-color);
-        width: 100%;
-        padding: calc(var(--nf-input-size) * 0.75);
-        height: calc(var(--nf-input-size) * 2.75);
+        width: 50%;
+        padding: 0 0 0 .5rem;
+        height: calc(var(--nf-input-size) * 1.5);
         line-height: normal;
         appearance: none;
         transition: all 0.15s ease-out; }

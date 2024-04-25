@@ -9,9 +9,9 @@ function LoginPage() {
     password: "",
   });
 
-  const [ error, setError ] = useState();
+  const [error, setError] = useState();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleInput = (ev) => {
     setData({
@@ -34,10 +34,10 @@ function LoginPage() {
           const reponseData = await response.json();
           localStorage.setItem("token", reponseData.token);
 
-          navigate("/profile")
+          navigate("/profile");
         })
         .catch((error) => {
-          setError('Usuario o contraseña incorrectos')
+          setError("Usuario o contraseña incorrectos");
         });
     };
 
@@ -46,23 +46,28 @@ function LoginPage() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Accede a la aplicación</h2>
       <div className="fields">
-        <label htmlFor="user">Usuario: </label>
-        <input type="text" name="email" id="email" onInput={handleInput} />
-        <label htmlFor="password">Contraseña: </label>
+        <h3>Accede a la aplicación</h3>
+        <label htmlFor="user"></label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Usuario"
+          onInput={handleInput}
+        />
+        <label htmlFor="password"></label>
         <input
           type="password"
           name="password"
           id="password"
+          placeholder="Contraseña"
           onInput={handleInput}
         />
+        <button className="btn">Enviar</button>
       </div>
-      {
-        error &&
-        <p className="text--error">{error}</p>
-      }
-      <button className="btn">Enviar</button>
+      {error && <p className="text--error">{error}</p>}
+
       <Link className="btn" to="/">
         Volver
       </Link>

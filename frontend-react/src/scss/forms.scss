@@ -1,6 +1,6 @@
 .title{
     margin: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Space Grotesk";
     color: #cfffd9;
     &_container{
         padding: 1px;
@@ -10,6 +10,12 @@
         
     }
     
+}
+.h31{
+    margin-top: 2rem;
+    text-align: center;
+    font-family: "Space Grotesk";
+    color: black;
 }
 .username{
     display: flex;
@@ -34,7 +40,7 @@
 }
 .section{
     margin: 0 auto;
-    width: 70%;
+    width: 50%;
     display: block;
     background: #fff;
     padding: 2em;
@@ -47,21 +53,18 @@
     .btn {
     border: none;
     display: block;
-    width: 145px;
     margin-bottom: 1rem;
     margin-top: 1rem;
-  
     margin-inline: auto;
     margin-block: 8px;
-    padding: 5px 18px;
+    padding: 5px 3px;
     background-color:black;
     color:#bdffca;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Space Grotesk";
     font-weight: 600;
     text-transform: none;
     text-decoration: none;
     text-align: center;
-    border-radius: 20cm;
     
   
     cursor: pointer;

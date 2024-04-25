@@ -51,6 +51,7 @@ function form({ updateAvatarAuthor, updateAnswer, questions }) {
       <div className="title_container">
         <h2 className="title">Cuéntale sobre ti:</h2>
       </div>
+      <h3 className="h31">Lo primero es lo primero, presentate:</h3>
       <section className="section">
         <div className="nice-form-group">
           <label className="username">
@@ -82,6 +83,12 @@ function form({ updateAvatarAuthor, updateAnswer, questions }) {
               id="birthdate"
             />
           </label>
+          </div>
+          </section>
+          <h3 className="h31">¿Qué prefieres?</h3>
+          <section className="section">
+          <div className="nice-form-group">
+            
 
           {questions.map((oneQuestion) => (
             <Question
@@ -95,20 +102,24 @@ function form({ updateAvatarAuthor, updateAnswer, questions }) {
           ))}
 
           {error && <p>{error}</p>}
-
+          </div>
+      </section>
+      <h3 className="h31">¡Sonríe para la foto!</h3>
+            <section className="section">
           <fieldset className="btn">
             <GetAvatar
               updateAvatar={updateAvatarAuthor}
               text="Sube una foto tuya"
             />
           </fieldset>
+          </section>
 
-          <button className="btn" onClick={handleOnClick}>
+          <section>
+            <button className="btn" onClick={handleOnClick}>
             {" "}
             Generar perfil
           </button>
-        </div>
-      </section>
+          </section>
     </form>
   );
 }

@@ -19,6 +19,7 @@ function LandingPage(){
           <Link className="btn" to="/register">
             Regístrate {" "}
           </Link>
+          <div className="landing_p">
           <div className="landing_ph">
           <section className="landing_section">
             <img className="landing_img" src={imageFam} alt="" />
@@ -29,6 +30,7 @@ function LandingPage(){
           
               <p className="landing_frase">"Mi soledad no tiene nada que ver con la presencia o ausencia de personas. Detesto quien me roba la soledad sin a cambio ofrecer verdadera compañía"</p>
               <p className="landing_author">-Friedrich Nietzsche-</p>
+            </div>
             </div>
         </div>
       </div>  

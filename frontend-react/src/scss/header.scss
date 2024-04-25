@@ -5,8 +5,10 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        padding-bottom: 10px;
         @media only screen and (min-width: 768px) {
             flex-direction: row;
+            
           }
     }
     &_image {
@@ -17,15 +19,21 @@
     }
     &_menu{
         display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
+        flex-direction: row;
+        gap: 0.2rem;
+
+    }
+    &_menu1{
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: black; 
         align-items: center;
         justify-content:space-around ;
         text-align: center;
-        font-family:Arial, Helvetica, sans-serif;
-        font-weight: 600;
+        font-family: "Space Grotesk";
+        font-weight: 500;
         text-decoration: none;
-        color: black;
+        color:#bdffca;
         @media only screen and (min-width: 768px) {
             flex-direction: row;
     }

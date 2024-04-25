@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-import "../../scss/pages/RegisterPage.scss"
+import "../../scss/pages/RegisterPage.scss";
 
 function RegisterPage() {
 
@@ -60,22 +60,23 @@ function RegisterPage() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Regístrate</h2>
+    <form className="loginForm" onSubmit={handleSubmit}>
       <div className="fields">
-        <label htmlFor="user">Usuario: </label>
-        <input type="text" name="email" id="email" onInput={handleInput} value={data.email} />
+        <h3>Regístrate</h3>
+        <label htmlFor="user"></label>
+        <input type="text" name="email" id="email" placeholder='Usuario' onInput={handleInput} value={data.email} />
         <span className="text--error">{errors.email}</span>
-        <label htmlFor="pass">Contraseña: </label>
-        <input type="password" name="password" id="password" onInput={handleInput} value={data.password} />
+        <label htmlFor="pass"></label>
+        <input type="password" name="password" id="password" placeholder='Contraseña' onInput={handleInput} value={data.password} />
         <span className="text--error">{errors.password}</span>
+        <button className="btn" type="submit">Enviar</button>
       </div>
 
       {
         errorResponse &&
         <p className="text--error">{errorResponse}</p>
       }
-      <button className="btn" type="submit">Enviar</button>
+     
       <Link className="btn" to="/">Volver</Link>
     </form>
     );

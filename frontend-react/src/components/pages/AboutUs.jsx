@@ -6,7 +6,7 @@ function AboutUs() {
   return (
     <section className="aboutUs">
       <h2>Sobre nosotros</h2>
-      <h3>Contra la Sombra de la Soledad: Un Homenaje a Nuestros Mayores</h3>
+      <h3 className="h32">Contra la Sombra de la Soledad: Un Homenaje a Nuestros Mayores</h3>
 
       <section className="text">
         <div className="div">
