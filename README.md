@@ -25,7 +25,8 @@ On the contact page you will find more information about the app.
 
 ### Contact Page
 
-![aboutus](https://github.com/elenavesc/Compartamos/assets/147326237/32604284-5736-46a9-9e30-4c4d04144ce6)
+![aboutus_page-0001 (1)](https://github.com/elenavesc/Compartamos/assets/147326237/1492809f-7642-493b-b798-49240f74630c)
+
 
 ## Key Features
 
