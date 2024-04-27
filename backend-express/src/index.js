@@ -94,8 +94,9 @@ app.post("/profile", authenticateToken, async (req, res) => {
   const name = req.body?.name;
   const address = req.body?.address;
   const birthdate = req.body?.birthdate;
+  const description = req.body?.description;
 
-  if (!name || !address || !birthdate)
+  if (!name || !address || !birthdate || !description)
     return res.status(400).json({ error: "Faltan parametros" });
 
 
@@ -103,7 +104,8 @@ app.post("/profile", authenticateToken, async (req, res) => {
   await User.updateOne({ email: token_email }, {
     name: name,
     address: address,
-    birthdate: new Date(birthdate)
+    birthdate: new Date(birthdate),
+    description: description,
   });
 
   return res.status(200).json({message: 'OK'});
@@ -120,7 +122,8 @@ app.get("/profile", authenticateToken, async (req, res) =>{
   return res.json({
     "name": user.name,
     "birthdate": user.birthdate,
-    "address": user.address
+    "address": user.address,
+    "description": user.description,
   })
 })
 

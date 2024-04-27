@@ -25,7 +25,6 @@
     flex-direction: row;
     justify-content: space-between;
     font-family: Roboto;
-    font-weight: 500;
 }
 
 .address {
@@ -33,7 +32,6 @@
     flex-direction: row;
     justify-content: space-between;
     font-family: Roboto;
-    font-weight: 500;
 }
 
 .age {
@@ -41,12 +39,24 @@
     flex-direction: row;
     justify-content: space-between;
     font-family: Roboto;
-    font-weight: 500;
+}
+.description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Roboto;
+}
+.dsc {
+    display: flex;
+    flex-direction: row ;
+    height: 200px;
+    
+    
 }
 
-.section {
+.section_form {
     margin: 0 auto;
-    width: 30%;
+    width: 60%;
     display: block;
     background: #fff;
     padding: 2em;

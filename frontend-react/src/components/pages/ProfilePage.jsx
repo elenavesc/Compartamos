@@ -28,17 +28,22 @@ function ProfilePage() {
   }, []);
 
   return (
-    <section>
-      <div className="section">
+    <section >
+
         <h2 className="profile_title">Mi perfil</h2>
+        <div className="section_profile">
         <div className="image">
           <img className="image_img" src={profileData?.image} alt="mi imagen" />
         </div>
-        <h3 className="name">{profileData.name}</h3>
-        <h4 className="city">{profileData.address} </h4>
-        <h4 className="city">
-          {new Date(profileData.birthdate).getFullYear()}{" "}
-        </h4>
+        
+        <div className="section_info">
+        <h3 className="name">Nombre: {profileData.name}</h3>
+        <h4 className="city">Soy de: {profileData.address}</h4>
+        <h4 className="city">Nací en: {new Date(profileData.birthdate).getFullYear()}{" "}</h4>
+        <h4 className="city">Yo soy: <p>{profileData.description}</p></h4>
+        
+        
+      </div>
       </div>
 
       <Link className="btn" to="/forms">
@@ -49,6 +54,7 @@ function ProfilePage() {
         Volver al inicio {""}
       </Link>
     </section>
+    
   );
 }
 

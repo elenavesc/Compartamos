@@ -7,22 +7,35 @@
 
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  padding-bottom: 3rem;
+.section_profile {
+  margin: 0 auto;
+  align-items: center;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    padding: 2em;
+    border-radius: 0.75rem;
+    line-height: 1.6;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+}
+.section_info{
+  width: 40%;
+  background-color: #cfffd9;
+  border-radius: 0.5cm;
+
 }
 
 .name {
-  text-align: center;
+  
   margin-left: 20px;
   font-family: "Space Grotesk";
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .city {
-  text-align: center;
+  
   margin-left: 20px;
   font-family: "Space Grotesk";
   font-size: 1rem;

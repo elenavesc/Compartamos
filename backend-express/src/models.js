@@ -22,6 +22,10 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     required: false,
   },
+  description: {
+    type: String,
+    required: false,
+  }
 });
 
 const User = mongoose.model("User", UserSchema);

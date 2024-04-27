@@ -9,6 +9,7 @@ function form({ updateAvatarAuthor, updateAnswer, questions }) {
     name: "",
     address: "",
     birthdate: "",
+    description: "",
   });
   const [error, setError] = useState();
   const navigate = useNavigate();
@@ -51,7 +52,7 @@ function form({ updateAvatarAuthor, updateAnswer, questions }) {
         <h2 className="title">Cuéntale sobre ti:</h2>
       </div>
       <h3 className="h31">Lo primero es lo primero, presentate:</h3>
-      <section className="section">
+      <section className="section_form">
         <div className="nice-form-group">
           <label className="username">
             Tu nombre:
@@ -81,11 +82,21 @@ function form({ updateAvatarAuthor, updateAnswer, questions }) {
               onInput={handleTextInput}
               id="birthdate"
             />
-          </label>
+            </label>
+            <label className="description">
+              Descríbete, te quieren conocer:
+              <input 
+              type="text"
+              className="dsc"
+              value={data.description}
+              onInput={handleTextInput}
+              id="description" />
+            </label>
+          
         </div>
       </section>
       <h3 className="h31">¿Qué prefieres?</h3>
-      <section className="section">
+      <section className="section_form">
         <div className="nice-form-group">
           {questions.map((oneQuestion) => (
             <Question
@@ -102,7 +113,7 @@ function form({ updateAvatarAuthor, updateAnswer, questions }) {
         </div>
       </section>
       <h3 className="h31">¡Sonríe para la foto!</h3>
-      <section className="section">
+      <section className="section_form">
         <fieldset className="btn">
           <GetAvatar
             updateAvatar={updateAvatarAuthor}
