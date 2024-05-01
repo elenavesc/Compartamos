@@ -4,28 +4,33 @@ Welcome to Compartamos!
 This platform was designed with the aim of providing older adults the opportunity to find a roommate with similar interests and ensuring a comfortable and safe living environment.
 
 ### Landing Page
-![portada](https://github.com/elenavesc/Compartamos/assets/147326237/91c91f45-88d1-492b-a736-6c19c36a9922)
+![Screenshot (1)](https://github.com/elenavesc/Compartamos/assets/147326237/21754326-a5bf-45c2-bcb5-a71a8fbdd3ca)
+
 
 ### Login Page
-![registro](https://github.com/elenavesc/Compartamos/assets/147326237/46db58f7-2360-4d79-9653-3066808ebf2f)
+![Screenshot (3)](https://github.com/elenavesc/Compartamos/assets/147326237/384c06c1-9cb2-47ef-8dcb-430975e04e94)
+
 
 After access your profile will appear.
 
 ### Profile Page
+![Screenshot (2)](https://github.com/elenavesc/Compartamos/assets/147326237/b308339a-fbcc-4ced-b5c0-e431467afa1e)
 
-![perfil_page-0001](https://github.com/elenavesc/Compartamos/assets/147326237/b7e4652e-e2ca-42be-8d42-ac3b6350c94d)
+
 
 If you are not registered, the form page will appear where you will fill out your information and generate your profile. You can also access it from the profile page if you want to make any changes.
 
 ### Form Page
+![Compartamos2_page-0001](https://github.com/elenavesc/Compartamos/assets/147326237/d25eb417-e424-4772-aace-47a6a792163e)
 
-![formulario_page-0001](https://github.com/elenavesc/Compartamos/assets/147326237/0c27c0b5-008d-4b66-88ee-44399b0c0a95)
+
 
 On the contact page you will find more information about the app.
 
 ### Contact Page
+![Compartamos_page-0001](https://github.com/elenavesc/Compartamos/assets/147326237/26e3ee31-86fc-4202-a927-52d060016e8c)
 
-![aboutus_page-0001 (1)](https://github.com/elenavesc/Compartamos/assets/147326237/1492809f-7642-493b-b798-49240f74630c)
+
 
 
 ## Key Features
@@ -69,8 +74,6 @@ npm install
 
 4. Set up environment variables in a `.env` file:
 
-contact with us: contact@compartamos.com
-
 5. Start the application:
 
 ```bash
@@ -83,8 +86,3 @@ Visit `http://localhost:3000` in your browser to start using the application.
 
 We appreciate any contributions to improve this application! If you find bugs, have ideas for new features or improvements, feel free to create a pull request.
 
-## Contact
-
-For any questions or issues, feel free to contact us at [contact@compartamos.com](mailto:contact@compartamos.com).
-
-We hope you enjoy using Compartamos for Older Adults Living!
