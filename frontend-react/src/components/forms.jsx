@@ -82,17 +82,17 @@ function form({ updateAvatarAuthor, updateAnswer, questions }) {
               onInput={handleTextInput}
               id="birthdate"
             />
-            </label>
-            <label className="description">
-              Descríbete, te quieren conocer:
-              <input 
+          </label>
+          <label className="description">
+            Descríbete, te quieren conocer:
+            <input
               type="text"
               className="dsc"
               value={data.description}
               onInput={handleTextInput}
-              id="description" />
-            </label>
-          
+              id="description"
+            />
+          </label>
         </div>
       </section>
       <h3 className="h31">¿Qué prefieres?</h3>

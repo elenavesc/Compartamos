@@ -3,22 +3,22 @@ const mongoose = require("mongoose");
 const { User } = require("./models");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const cors = require('cors')
+const cors = require("cors");
+const multer = require("multer");
+
+storage = multer.memoryStorage();
+const upload = multer({ storage });
 
 require("dotenv").config();
 
 const app = express();
 app.use(express.json());
-app.use(cors())
+
+app.use(cors());
 
 const validateUser = (hash, password) => {
-  bcrypt
-    .compare(password, hash)
-    .then((res) => {
-      console.log(res); 
-    })
-    .catch((err) => console.error(err.message));
-}
+  bcrypt.compare(password, hash).catch((err) => console.error(err.message));
+};
 
 const generateToken = (payload) => {
   const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1h" });
@@ -28,19 +28,17 @@ const generateToken = (payload) => {
 const authenticateToken = (req, res, next) => {
   const token = req.get("Authorization");
 
-  if (!token)
-    return res.status(403).json({error: "Unauthorized"})
+  if (!token) return res.status(403).json({ error: "Unauthorized" });
 
   try {
-    decoded_token = jwt.verify(token, process.env.JWT_SECRET)
-    res.locals.token_data = decoded_token
+    decoded_token = jwt.verify(token, process.env.JWT_SECRET);
+    res.locals.token_data = decoded_token;
   } catch (error) {
-    console.log(error)
-    return res.status(403).json({error: "Unauthorized"})
+    return res.status(403).json({ error: "Unauthorized" });
   }
-  
-  next()
-}
+
+  next();
+};
 
 app.get("/", async (req, res) => {
   return res.json({ message: "Hello, World" });
@@ -60,11 +58,14 @@ app.post("/register", async (req, res) => {
   try {
     await newUser.save();
   } catch (error) {
-    console.log(error);
     return res.status(400).json({ error: "Este usuario ya existe" });
   }
 
-  const token = generateToken({ email: newUser.email, name: newUser.name, id: newUser.id });
+  const token = generateToken({
+    email: newUser.email,
+    name: newUser.name,
+    id: newUser.id,
+  });
 
   return res.json({ token: token });
 });
@@ -80,8 +81,6 @@ app.post("/login", async (req, res) => {
   const passwordHash = await bcrypt.hash(password, 10);
 
   if (validateUser(passwordHash, password)) {
-    console.log(passwordHash);
-    console.log(user.password);
     return res.status(403).json({ error: "La contraseña es incorrecta" });
   }
 
@@ -99,33 +98,55 @@ app.post("/profile", authenticateToken, async (req, res) => {
   if (!name || !address || !birthdate || !description)
     return res.status(400).json({ error: "Faltan parametros" });
 
+  const token_email = res.locals.token_data.email;
+  await User.updateOne(
+    { email: token_email },
+    {
+      name: name,
+      address: address,
+      birthdate: new Date(birthdate),
+      description: description,
+    }
+  );
 
-  const token_email = res.locals.token_data.email
-  await User.updateOne({ email: token_email }, {
-    name: name,
-    address: address,
-    birthdate: new Date(birthdate),
-    description: description,
-  });
-
-  return res.status(200).json({message: 'OK'});
-
+  return res.status(200).json({ message: "OK" });
 });
 
-app.get("/profile", authenticateToken, async (req, res) =>{
-  req.get("Authorization")
-  
-  const token_data = res.locals.token_data
-  
-  const user = await User.findOne({"email": token_data.email})
-  console.log(user)
+app.post(
+  "/profile/picture",
+  authenticateToken,
+  upload.single("image"),
+  async (req, res) => {
+    const imageBuffer = req.file.buffer;
+
+    const base64Image = imageBuffer.toString("base64");
+
+    const token_email = res.locals.token_data.email;
+    await User.updateOne(
+      { email: token_email },
+      {
+        image: base64Image,
+      }
+    );
+
+    return res.status(200).json({ message: "OK" });
+  }
+);
+
+app.get("/profile", authenticateToken, async (req, res) => {
+  req.get("Authorization");
+
+  const token_data = res.locals.token_data;
+
+  const user = await User.findOne({ email: token_data.email });
   return res.json({
-    "name": user.name,
-    "birthdate": user.birthdate,
-    "address": user.address,
-    "description": user.description,
-  })
-})
+    name: user.name,
+    birthdate: user.birthdate,
+    address: user.address,
+    description: user.description,
+    image: user.image,
+  });
+});
 
 // app.put("/api/logout", function (req, res) {
 //   const authHeader = req.headers["authorization"];
@@ -137,7 +158,6 @@ app.get("/profile", authenticateToken, async (req, res) =>{
 //      }
 //   });
 // });
-
 
 const start = async () => {
   try {
